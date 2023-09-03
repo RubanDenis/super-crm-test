@@ -1,0 +1,104 @@
+@import "./vars.scss";
+
+.toDoListItemWraper {
+    width: 100%;
+    padding: 4px;
+
+    border-radius: 7px;
+    background: $light_background;
+}
+
+.toDoListItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0px 1px 2px 0px $dark_shadow, 0px 0px 2px 0px $light_shadow;
+    background-color: $white;
+}
+
+.itemTitle {
+    color: $main_blue;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    .itemCheckbox {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+}
+
+.timeIntervalWraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .timeIntervalItem {
+        color: $main_green;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+    }
+}
+
+.itemDescription {
+    color: $gray;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    margin: 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.itemFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.tagWraper {
+    display: flex;
+    gap: 4px;
+
+    .itemTag {
+        padding: 1px 6px 2px 6px;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        border-radius: 4px;
+        color: $secondary_tag_text_color;
+        background-color: $secondary_tag_background;
+
+        &:first-child {
+            background-color: $primary_tag_background;
+            color: $white;
+        }
+    }
+
+    .tagRectangle {
+        width: 12px;
+        margin-left: -8px;
+        background-image: url("../icons/Rectangle.svg");
+        background-repeat: no-repeat;
+    }
+}
